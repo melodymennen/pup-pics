@@ -1,4 +1,4 @@
-# Pupper Place 
+# Pup Pics
 
 <!-- ## For the live version, click [here](http://wtfsimte.com). -->
 
