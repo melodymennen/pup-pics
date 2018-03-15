@@ -2,7 +2,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const massive = require('massive')
+const multer = require('multer')
 const bcrypt = require('bcrypt')
+const AWS = require('aws-sdk')
  
 require('dotenv').config()
  
@@ -74,6 +76,36 @@ app.get('/user-data', (req, res) => {
 app.post('/logout', (req, res) => {
     req.session.destroy()
     res.status(200).send()
+})
+
+// AWS S3 upload 
+AWS.config.update({
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.REGION
+})
+
+const s3 = new AWS.S3()
+const upload = multer({
+    storage: multer.memoryStorage(),
+    limits: {
+        fileSize: 52428800
+    }
+})
+
+app.post('/upload', upload.single('image'), (req, res) => {
+    const fileName = req.file.originalname.split(' ').join('+')
+    s3.putObject({
+        Bucket: process.env.BUCKET,
+        Key: req.file.originalname,
+        Body: req.file.buffer,
+        ContentType: "image/png",
+        ACL: 'public-read'
+        }, (err) => {
+        console.log('upload error', err)
+        if (err) return res.status(400).send(err)
+        res.send(`https://s3-${process.env.REGION}.amazonaws.com/${process.env.BUCKET}/${fileName}`)
+    })
 })
 
 // const path = require('path')
