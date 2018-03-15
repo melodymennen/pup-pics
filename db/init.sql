@@ -1,7 +1,7 @@
 CREATE TABLE users (
 id SERIAL PRIMARY KEY, 
-name TEXT, 
-email TEXT
+username TEXT UNIQUE,
+password TEXT
 );
 
 CREATE TABLE profiles ( 
@@ -28,8 +28,8 @@ photo_id INTEGER references photos(id) ON DELETE CASCADE,
 comment TEXT
 );
 
-CREATE TABLE likes ( 
-id SERIAL PRIMARY KEY, 
-photo_id INTEGER references photos(id) ON DELETE CASCADE,
-user_id INTEGER references users(id) ON DELETE CASCADE
-);
+-- CREATE TABLE likes ( 
+-- id SERIAL PRIMARY KEY, 
+-- photo_id INTEGER references photos(id) ON DELETE CASCADE,
+-- user_id INTEGER references users(id) ON DELETE CASCADE
+-- );
