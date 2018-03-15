@@ -2,7 +2,10 @@
   "name": "pupper-place",
   "version": "0.1.0",
   "private": true,
+  "main": "server/server.js",
+  "proxy": "http://localhost:3035",
   "dependencies": {
+    "axios": "^0.18.0",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
@@ -25,5 +28,8 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "now": {
+    "alias": "pup-pics"
   }
 }

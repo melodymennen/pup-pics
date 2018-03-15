@@ -23,6 +23,8 @@ massive(process.env.CONNECTION_STRING).then(db => {
     console.log('error', error)
 })
 
+// app.use( express.static( `${__dirname}/../build` ) )
+
 app.post('/register', (req, res) => {
     const db = app.get('db')
     const { username, password } = req.body
@@ -61,10 +63,23 @@ app.post('/login', (req, res) => {
     })
 })
 
+app.get('/user-data', (req, res) => {
+    if (req.session.user){
+        res.status(200).send(req.session.user)
+    } else {
+        res.status(403)
+    }
+})
+
 app.post('/logout', (req, res) => {
     req.session.destroy()
     res.status(200).send()
 })
+
+// const path = require('path')
+// app.get('*', (req, res)=>{
+//   res.sendFile(path.join(__dirname, '../build/index.html'))
+// })
  
 const port = process.env.SERVER_PORT
 app.listen(port, () => console.log('listening on port ' + port))

@@ -2,14 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Hind', sans-serif;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .Header {
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between;
-  div {
-    cursor: pointer;
-  }
-}
+  justify-content: space-between; }
+  .Header div {
+    cursor: pointer; }
