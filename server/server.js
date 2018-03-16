@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const controller = require('./controller')
 const session = require('express-session')
 const massive = require('massive')
 const multer = require('multer')
@@ -27,6 +28,11 @@ massive(process.env.CONNECTION_STRING).then(db => {
 
 // app.use( express.static( `${__dirname}/../build` ) )
 
+// my endpoints
+app.post('/api/profiles', controller.createProfile)
+app.get('/api/profiles', controller.getProfile)
+
+// bcrypt login stuff
 app.post('/register', (req, res) => {
     const db = app.get('db')
     const { username, password } = req.body
@@ -50,8 +56,9 @@ app.post('/login', (req, res) => {
         if (user.length) {
             bcrypt.compare(password, user[0].password).then(passwordsMatch => {
                 if (passwordsMatch) {
-                    req.session.user = {user: user[0].username}
+                    req.session.user = {user: user[0].username, id: user[0].id}
                     res.json({user: req.session.user})
+                    console.log(req.session.user)
                 } else {
                     res.status(403).json({message: 'wrong password'})
                 }

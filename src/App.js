@@ -8,7 +8,7 @@ import axios from 'axios'
 
 class App extends Component {
     state = {
-        user: 'a',
+        user: null,
         view: 'home'
     }
 
@@ -58,15 +58,14 @@ class App extends Component {
             <div className="App">
                 <Header user={user} changeView={this.changeView}/>
                 {`${this.state.view}  user: ${user}`}
-                {/* <Account user={user} /> */}
-                <NewProfile user={user} />
-                {/* {view === 'home' ? <Home /> : 
+                {
+                    // view === 'home' ? <Home /> : 
                 view === 'login' ? <Login login={this.login} register={this.register} inputFields={inputFields} /> : 
-                view === 'account' ? <Account user={user}/> : 
+                view === 'account' ? <Account user={user} changeView={this.changeView}/> : 
+                view === 'new profile' ? <NewProfile user={user} changeView={this.changeView}/> : 
                 view === 'view' ? <component /> : 
                 view === 'view' ? <component /> : 
-                view === 'view' ? <component /> : 
-                view === 'view' ? <component /> : null} */}
+                view === 'view' ? <component /> : null}
                 <Footer />
             </div>
         )

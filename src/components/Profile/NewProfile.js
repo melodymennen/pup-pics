@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import FileUpload from '../global/FileUpload'
 import BreedDropdown from './BreedDropdown'
+import axios from 'axios'
 
 class NewProfile extends Component{
     state = {
@@ -31,6 +32,27 @@ class NewProfile extends Component{
         this.setState({sex})
     }
 
+    createProfile = () => {
+        const body = {
+            name: this.state.name,
+            breed: this.state.breed,
+            age: this.state.age,
+            sex: this.state.sex,
+            url: this.state.url
+        }
+
+        axios.post('/api/profiles', body).then(() => {
+            this.setState({
+                name: '',
+                breed: '',
+                age: '',
+                sex: '',
+                url: ''
+            })
+            this.props.changeView('home')
+        })
+    }
+
     render() {
         return (
             <div className="NewProfile">
@@ -48,6 +70,7 @@ class NewProfile extends Component{
                     <option value='male'>male</option>
                     <option value='female'>female</option>
                 </select>
+                <button onClick={this.createProfile} >Create Profile</button>
             </div>
         )
     }
