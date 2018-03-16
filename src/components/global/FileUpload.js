@@ -16,14 +16,14 @@ class FileUpload extends Component {
                 alert('File Uploaded Succesfully')
                 console.log('File Uploaded Succesfully')
                 console.log(response.text)
-                // this.setState({ pictureUrl: response.text})
+                this.props.sendUrl(response.text)
             }
         })
     }
 
     render(){
         return(
-            <div>
+            <div className="FileUpload">
                 <Dropzone onDrop={ this.onDrop } multiple={ false } className="dropzone input big-input" >
                     <div className="droptext">Drop a file here, or click to select a file to upload.</div>
                     <div><i className="far fa-images"></i></div>
