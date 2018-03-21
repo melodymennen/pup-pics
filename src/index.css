@@ -49,10 +49,12 @@ body {
 
 .Home {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column; }
 
 .Photo {
-  margin: 20px; }
+  margin: 20px;
+  border: 1px solid hotpink; }
   .Photo .photo {
     height: 400px;
     width: 400px; }

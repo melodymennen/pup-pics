@@ -60,10 +60,12 @@ body {
 .Home {
   display: flex;
   justify-content: center;
+  flex-direction: column; 
 }
 
 .Photo {
   margin: 20px;
+  border: 1px solid hotpink;
   .photo {
     height: 400px;
     width: 400px;

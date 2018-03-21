@@ -8,21 +8,29 @@ module.exports = {
             res.status(200).send('success')
         }).catch(error => console.log('create profile error', error))
     }, 
-    getProfile: (req, res) => {
+    getProfiles: (req, res) => {
         const db =  req.app.get('db')
         const { user } = req.session
 
-        db.get_profile([user.id]).then(profile => {
+        db.get_profiles([user.id]).then(profiles => {
+            res.status(200).json(profiles)
+        }).catch(error => console.log('get profiles error', error))
+    }, 
+    getProfile: (req, res) => {
+        const db =  req.app.get('db')
+        const { id } = req.body
+
+        db.get_profile([id]).then(profile => {
             res.status(200).json(profile)
         }).catch(error => console.log('get profile error', error))
     }, 
     addPhoto: (req, res) => {
         const db =  req.app.get('db')
         const timestamp = new Date().getTime()
-        const { url, caption } = req.body
+        const { url, caption, profile_id } = req.body
         const { user } = req.session
 
-        db.add_photo([user.id, 2, url, timestamp, caption]).then(() => {
+        db.add_photo([user.id, profile_id, url, timestamp, caption]).then(() => {
             res.status(200).send('success')
         }).catch(error => console.log('add photo error', error))
     }, 

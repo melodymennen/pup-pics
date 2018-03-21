@@ -30,7 +30,8 @@ massive(process.env.CONNECTION_STRING).then(db => {
 
 // my endpoints
 app.post('/api/profiles', controller.createProfile)
-app.get('/api/profiles', controller.getProfile)
+app.get('/api/profiles', controller.getProfiles)
+app.post('/api/singleprofile', controller.getProfile)
 app.post('/api/photos', controller.addPhoto)
 app.get('/api/photos', controller.getAllPhotos)
 

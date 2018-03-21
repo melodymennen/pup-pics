@@ -19,7 +19,8 @@ class AddPhoto extends Component{
     addPhoto = () => {
         const body = {
             url: this.state.url, 
-            caption: this.state.caption
+            caption: this.state.caption, 
+            profile_id: this.props.profile
         }
 
         axios.post('/api/photos', body).then(() => {
@@ -36,7 +37,6 @@ class AddPhoto extends Component{
             <div className="AddPhoto">
                 <FileUpload sendUrl={this.sendUrl}/>
                 <textarea value={this.state.caption} placeholder="Your caption here." className="input" maxLength="140" onChange={e => this.updateCaption(e.target.value)}/>
-                {this.state.caption}
                 <button onClick={this.addPhoto}>Add Photo</button>
             </div>
         )

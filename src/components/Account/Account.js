@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ProfileMini from '../Profile/ProfileMini'
 import NewProfile from '../Profile/NewProfile'
 import AddPhoto from '../Photos/AddPhoto'
 import Profile from '../Profile/Profile'
@@ -42,7 +41,7 @@ class Account extends Component {
                 {
                 view === 'account' ? <ProfileList changeView={this.changeView} profiles={profiles} changeProfile={this.changeProfile}/> : 
                 view === 'new profile' ? <NewProfile changeView={this.changeView}/> : 
-                view === 'add photo' ? <AddPhoto changeView={this.changeView}/> : 
+                view === 'add photo' ? <AddPhoto changeView={this.changeView} profile={currentProfile}/> : 
                 view === 'profile' ? <Profile changeView={this.changeView} profile={currentProfile}/> : 
                 view === 'view' ? <component /> : null}
             </div>

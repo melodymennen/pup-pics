@@ -21,7 +21,7 @@ class ProfileList extends Component {
             <div className="ProfileList">
                 {profiles}
                 <div className="button" onClick={() => this.props.changeView('new profile')}>
-                    <i class="fas fa-plus"></i>
+                    <i className="fas fa-plus"></i>
                     Add a dog
                 </div> 
             </div>

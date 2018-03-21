@@ -12,6 +12,10 @@ class App extends Component {
         view: 'home'
     }
 
+    componentDidMount(){
+        this.getUser()
+    }
+
     register = () => {
         const username = this.refs.username.value
         const password = this.refs.password.value
@@ -39,9 +43,7 @@ class App extends Component {
     getUser = () => {
         axios.get('/user-data').then(response => {
             if (response.data) {
-                console.log(response.data)
-                console.log(response.data.user.user)
-                this.setState({ user: response.data })
+                this.setState({ user: response.data.user })
             }
         })
     }
