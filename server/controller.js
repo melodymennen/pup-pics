@@ -40,5 +40,13 @@ module.exports = {
         db.get_all_photos().then(photos => {
             res.status(200).json(photos)
         }).catch(error => console.log('get all photos error', error))
+    },     
+    getPhotosPerPet: (req, res) => {
+        const db =  req.app.get('db')
+        const { id } = req.body
+
+        db.get_photos_per_pet([id]).then(photos => {
+            res.status(200).json(photos)
+        }).catch(error => console.log('get photos per pet error', error))
     }
 }

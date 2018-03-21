@@ -33,6 +33,7 @@ app.post('/api/profiles', controller.createProfile)
 app.get('/api/profiles', controller.getProfiles)
 app.post('/api/singleprofile', controller.getProfile)
 app.post('/api/photos', controller.addPhoto)
+app.post('/api/photosperpet', controller.getPhotosPerPet)
 app.get('/api/photos', controller.getAllPhotos)
 
 // bcrypt login stuff
