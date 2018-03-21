@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ProfileMini from '../Profile/ProfileMini'
 import axios from 'axios'
 
 class Account extends Component{
@@ -17,22 +18,25 @@ class Account extends Component{
     }
 
     render() {
+        
         const profiles = this.state.profiles.map(item => {
             return (
-                <div key={item.id}>
-                    <img src={item.profile_photo} alt={item.name}/>
-                    {item.name}
-                    {item.breed}
-                    {item.sex}
-                    {item.age}
-                </div>
+                <ProfileMini key={item.id}
+                    name={item.name}
+                    breed={item.breed}
+                    sex={item.sex}
+                    age={item.age} 
+                    profile_photo={item.profile_photo}
+                />
             )
         })
         return (
             <div className="Account">
-                <button onClick={() => this.props.changeView('new profile')}>Add a dog</button> 
-                {this.state.profiles}
                 {profiles}
+                <div className="button" onClick={() => this.props.changeView('new profile')}>
+                    <i class="fas fa-plus"></i>
+                    Add a dog
+                </div> 
             </div>
         )
     }
