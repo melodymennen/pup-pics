@@ -14,16 +14,6 @@ body {
   justify-content: space-between;
 }
 
-.FileUpload {
-  .dropzone {
-    border: 1px solid hotpink;
-  }
-  .far {
-    font-size: 2.5em;
-    margin: 5px;
-  }
-}
-
 .ProfileList {
   display: flex;
   justify-content: center;
@@ -65,9 +55,121 @@ body {
 
 .Photo {
   margin: 20px;
-  border: 1px solid hotpink;
-  .photo {
-    height: 400px;
-    width: 400px;
+  .photo-container {
+    width: 500px;
+    margin: auto;    
   }
+  .photo {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+.Login {
+  text-align: center;
+  padding-top: 80px;
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 200px;
+    padding: 3px 5px;
+    margin: 5px;
+  }
+  .button {
+    width: 125px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+  }
+  .login {
+    background-color: lightgrey;
+  }
+  .signup {
+    background-color: lightgrey;
+  }
+}
+
+.Profile {
+  text-align: center;
+  .photo {
+    width: 90%;
+  }
+}
+
+.AddPhoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  textarea {
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none;
+  }
+  .button {
+    background-color: lightgrey;
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+.FileUpload {
+  text-align: center;
+  width: 100%;
+  .dropzone {
+    border: 1px solid hotpink;
+    min-width: 300px;
+    width: 50%;
+    padding: 40px 5px;
+    margin: auto;
+  }
+  .far {
+    font-size: 2.5em;
+    margin: 5px;
+  }
+}
+
+.NewProfile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  .button {
+    background-color: lightgrey;
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+  }
+  .selected, .not-selected {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid hotpink;
+    width: 80px;
+    text-align: center;
+    border-radius: 25px;
+  }
+  .selected {
+    background-color: hotpink;
+  }
+}
+
+.BreedDropdown {
+  min-width: 300px;
+  width: 51%;
+  margin: 10px;
 }

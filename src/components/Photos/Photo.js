@@ -20,9 +20,11 @@ const Photo = (props) => {
 
     return (
         <div className="Photo">
+        <div className="photo-container">
             <div className="photo" style={photoStyle}></div>
             <div>{props.caption}</div>
             <div>{timestamp(props.timestamp)}</div>
+        </div>
         </div>
     )
 }

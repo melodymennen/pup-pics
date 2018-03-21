@@ -4,8 +4,8 @@ const Login = (props) => {
     return (
         <div className="Login">
             {props.inputFields}
-            <button onClick={() => props.login()}> Log In </button>
-            <button onClick={() => props.register()}> Sign Up </button>
+            <div className="button login" onClick={() => props.login()}> Log In </div>
+            <div className="button signup" onClick={() => props.register()}> Sign Up </div>
         </div>
     )
 }

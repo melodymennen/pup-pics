@@ -20,7 +20,7 @@ class Profile extends Component {
         const { profile_photo, name, breed, age, sex } = this.state.profile
         return (
             <div className="Profile">
-                <img src={profile_photo} alt={name} height='400px'/>
+                <img src={profile_photo} alt={name} className="photo"/>
                 <div>{name}</div>
                 <div>{breed}</div>
                 <div>{sex}</div>

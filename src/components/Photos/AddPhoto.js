@@ -23,21 +23,25 @@ class AddPhoto extends Component{
             profile_id: this.props.profile
         }
 
-        axios.post('/api/photos', body).then(() => {
-            this.setState({
-                url: '', 
-                caption: ''
+        if(this.state.url === ''){
+            alert('please upload photo')
+        } else {
+            axios.post('/api/photos', body).then(() => {
+                this.setState({
+                    url: '', 
+                    caption: ''
+                })
+                this.props.changeView('home')
             })
-            this.props.changeView('home')
-        })
+        }
     }
 
     render() {
         return (
             <div className="AddPhoto">
                 <FileUpload sendUrl={this.sendUrl}/>
-                <textarea value={this.state.caption} placeholder="Your caption here." className="input" maxLength="140" onChange={e => this.updateCaption(e.target.value)}/>
-                <button onClick={this.addPhoto}>Add Photo</button>
+                <textarea value={this.state.caption} placeholder="Write a caption....." className="input" maxLength="140" onChange={e => this.updateCaption(e.target.value)}/>
+                <div className="button" onClick={this.addPhoto}>Add Photo</div>
             </div>
         )
     }

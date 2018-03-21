@@ -56,21 +56,15 @@ class NewProfile extends Component{
     render() {
         return (
             <div className="NewProfile">
-                Profile Picture
                 <FileUpload sendUrl={this.sendUrl}/>
-                Name 
                 <input value={this.state.name} placeholder="Name" className="input" maxLength="20" onChange={e => this.updateName(e.target.value)}/>
-                Breed 
                 <BreedDropdown updateBreed={this.updateBreed}/>
-                Age 
                 <input value={this.state.age} placeholder="Age" className="input" maxLength="2" onChange={e => this.updateAge(e.target.value)}/>                
-                Sex 
-                <select value={this.state.sex} className="dropdown" onChange={e => this.updateSex(e.target.value)}>
-                    <option value="0" selected>select...</option>
-                    <option value='male'>male</option>
-                    <option value='female'>female</option>
-                </select>
-                <button onClick={this.createProfile} >Create Profile</button>
+                <div>
+                    <div className={this.state.sex === 'male' ? "selected" : "not-selected"} onClick={e => this.updateSex('male')}>Male</div>
+                    <div className={this.state.sex === 'female' ? "selected" : "not-selected"} onClick={e => this.updateSex('female')}>Female</div>
+                </div>
+                <div className="button" onClick={this.createProfile}>Create Profile</div>
             </div>
         )
     }

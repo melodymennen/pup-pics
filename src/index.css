@@ -11,13 +11,6 @@ body {
   display: flex;
   justify-content: space-between; }
 
-.FileUpload .dropzone {
-  border: 1px solid hotpink; }
-
-.FileUpload .far {
-  font-size: 2.5em;
-  margin: 5px; }
-
 .ProfileList {
   display: flex;
   justify-content: center;
@@ -53,8 +46,100 @@ body {
   flex-direction: column; }
 
 .Photo {
-  margin: 20px;
-  border: 1px solid hotpink; }
+  margin: 20px; }
+  .Photo .photo-container {
+    width: 500px;
+    margin: auto; }
   .Photo .photo {
-    height: 400px;
-    width: 400px; }
+    height: 500px;
+    width: 500px; }
+
+.Login {
+  text-align: center;
+  padding-top: 80px; }
+  .Login input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 200px;
+    padding: 3px 5px;
+    margin: 5px; }
+  .Login .button {
+    width: 125px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block; }
+  .Login .login {
+    background-color: lightgrey; }
+  .Login .signup {
+    background-color: lightgrey; }
+
+.Profile {
+  text-align: center; }
+  .Profile .photo {
+    width: 90%; }
+
+.AddPhoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .AddPhoto textarea {
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    resize: none; }
+  .AddPhoto .button {
+    background-color: lightgrey;
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    text-align: center; }
+
+.FileUpload {
+  text-align: center;
+  width: 100%; }
+  .FileUpload .dropzone {
+    border: 1px solid hotpink;
+    min-width: 300px;
+    width: 50%;
+    padding: 40px 5px;
+    margin: auto; }
+  .FileUpload .far {
+    font-size: 2.5em;
+    margin: 5px; }
+
+.NewProfile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .NewProfile input {
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: inherit; }
+  .NewProfile .button {
+    background-color: lightgrey;
+    min-width: 300px;
+    width: 50%;
+    padding: 5px;
+    text-align: center; }
+  .NewProfile .selected, .NewProfile .not-selected {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    border: 1px solid hotpink;
+    width: 80px;
+    text-align: center;
+    border-radius: 25px; }
+  .NewProfile .selected {
+    background-color: hotpink; }
+
+.BreedDropdown {
+  min-width: 300px;
+  width: 51%;
+  margin: 10px; }
