@@ -58,13 +58,13 @@ class NewProfile extends Component{
             <div className="NewProfile">
                 Profile Picture
                 <FileUpload sendUrl={this.sendUrl}/>
-                Name {this.state.name}
+                Name 
                 <input value={this.state.name} placeholder="Name" className="input" maxLength="20" onChange={e => this.updateName(e.target.value)}/>
-                Breed {this.state.breed}
+                Breed 
                 <BreedDropdown updateBreed={this.updateBreed}/>
-                Age {this.state.age}
+                Age 
                 <input value={this.state.age} placeholder="Age" className="input" maxLength="2" onChange={e => this.updateAge(e.target.value)}/>                
-                Sex {this.state.sex}
+                Sex 
                 <select value={this.state.sex} className="dropdown" onChange={e => this.updateSex(e.target.value)}>
                     <option value="0" selected>select...</option>
                     <option value='male'>male</option>

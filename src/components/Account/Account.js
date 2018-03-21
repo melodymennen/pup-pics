@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ProfileMini from '../Profile/ProfileMini'
 import axios from 'axios'
 
-class Account extends Component{
+class Account extends Component {
     state = {
         profiles: []
     }

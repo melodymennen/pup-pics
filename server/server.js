@@ -31,6 +31,8 @@ massive(process.env.CONNECTION_STRING).then(db => {
 // my endpoints
 app.post('/api/profiles', controller.createProfile)
 app.get('/api/profiles', controller.getProfile)
+app.post('/api/photos', controller.addPhoto)
+app.get('/api/photos', controller.getAllPhotos)
 
 // bcrypt login stuff
 app.post('/register', (req, res) => {
