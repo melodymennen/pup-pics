@@ -22,7 +22,7 @@ class Account extends Component {
         })
     }
 
-    changeView = (input) => {
+    changeAcctView = (input) => {
         this.setState({view: input})
     }
 
@@ -39,10 +39,10 @@ class Account extends Component {
             <div className="Account">
                 {this.state.view}
                 {
-                view === 'account' ? <ProfileList changeView={this.changeView} profiles={profiles} changeProfile={this.changeProfile}/> : 
-                view === 'new profile' ? <NewProfile changeView={this.changeView}/> : 
-                view === 'add photo' ? <AddPhoto changeView={this.changeView} profile={currentProfile}/> : 
-                view === 'profile' ? <Profile changeView={this.changeView} profile={currentProfile}/> : 
+                view === 'account' ? <ProfileList changeAcctView={this.changeAcctView} profiles={profiles} changeProfile={this.changeProfile}/> : 
+                view === 'new profile' ? <NewProfile changeAcctView={this.changeAcctView}/> : 
+                view === 'add photo' ? <AddPhoto changeView={this.props.changeView} profile={currentProfile}/> : 
+                view === 'profile' ? <Profile changeAcctView={this.changeAcctView} profile={currentProfile}/> : 
                 view === 'view' ? <component /> : null}
             </div>
         )

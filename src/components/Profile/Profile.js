@@ -25,7 +25,7 @@ class Profile extends Component {
                 <div>{breed}</div>
                 <div>{sex}</div>
                 <div>{age} years old</div>
-                <button onClick={() => this.props.changeView('add photo')}>Add a photo of {name}</button>
+                <button onClick={() => this.props.changeAcctView('add photo')}>Add a photo of {name}</button>
             </div>
         )
     }

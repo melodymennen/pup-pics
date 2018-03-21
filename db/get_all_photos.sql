@@ -1,2 +1,2 @@
 SELECT * FROM photos
-ORDER BY timestamp;
+ORDER BY timestamp DESC;

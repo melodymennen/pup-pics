@@ -49,7 +49,7 @@ class NewProfile extends Component{
                 sex: '',
                 url: ''
             })
-            this.props.changeView('account')
+            this.props.changeAcctView('account')
         })
     }
 

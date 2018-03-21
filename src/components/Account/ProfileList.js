@@ -20,7 +20,7 @@ class ProfileList extends Component {
         return (
             <div className="ProfileList">
                 {profiles}
-                <div className="button" onClick={() => this.props.changeView('new profile')}>
+                <div className="button" onClick={() => this.props.changeAcctView('new profile')}>
                     <i className="fas fa-plus"></i>
                     Add a dog
                 </div> 
