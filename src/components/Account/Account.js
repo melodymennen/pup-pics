@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import ProfileMini from '../Profile/ProfileMini'
+import NewProfile from '../Profile/NewProfile'
+import AddPhoto from '../Photos/AddPhoto'
+import Profile from '../Profile/Profile'
+import ProfileList from './ProfileList'
 import axios from 'axios'
 
 class Account extends Component {
     state = {
-        profiles: []
+        view: 'account',
+        profiles: [], 
+        currentProfile: null
     }
 
     componentDidMount(){
@@ -17,26 +23,28 @@ class Account extends Component {
         })
     }
 
-    render() {
-        
-        const profiles = this.state.profiles.map(item => {
-            return (
-                <ProfileMini key={item.id}
-                    name={item.name}
-                    breed={item.breed}
-                    sex={item.sex}
-                    age={item.age} 
-                    profile_photo={item.profile_photo}
-                />
-            )
+    changeView = (input) => {
+        this.setState({view: input})
+    }
+
+    changeProfile = (input) => {
+        this.setState({
+            currentProfile: input, 
+            view: 'profile'
         })
+    }
+
+    render() {
+        const { view, profiles, currentProfile } = this.state
         return (
             <div className="Account">
-                {profiles}
-                <div className="button" onClick={() => this.props.changeView('new profile')}>
-                    <i class="fas fa-plus"></i>
-                    Add a dog
-                </div> 
+                {this.state.view}
+                {
+                view === 'account' ? <ProfileList changeView={this.changeView} profiles={profiles} changeProfile={this.changeProfile}/> : 
+                view === 'new profile' ? <NewProfile changeView={this.changeView}/> : 
+                view === 'add photo' ? <AddPhoto changeView={this.changeView}/> : 
+                view === 'profile' ? <Profile changeView={this.changeView} profile={currentProfile}/> : 
+                view === 'view' ? <component /> : null}
             </div>
         )
     }

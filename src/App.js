@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Header from './components/global/Header'
 import Footer from './components/global/Footer'
 import Account from './components/Account/Account'
-import NewProfile from './components/Profile/NewProfile'
-import AddPhoto from './components/Photos/AddPhoto'
 import Login from './components/Login/Login'
 import Home from './components/Home/Home'
 import axios from 'axios'
@@ -61,12 +59,12 @@ class App extends Component {
                 <Header user={user} changeView={this.changeView}/>
                 {`${this.state.view} - user: ${user}`}
                 {
-                    // view === 'home' ? <Home /> : 
+                view === 'home' ? <Home /> : 
                 view === 'login' ? <Login login={this.login} register={this.register} inputFields={inputFields} /> : 
                 view === 'account' ? <Account user={user} changeView={this.changeView}/> : 
-                view === 'new profile' ? <NewProfile user={user} changeView={this.changeView}/> : 
-                view === 'add photo' ? <AddPhoto changeView={this.changeView}/> : 
-                view === 'home' ? <Home /> : 
+                view === 'view' ? <component /> : 
+                view === 'view' ? <component /> : 
+                view === 'view' ? <component /> : 
                 view === 'view' ? <component /> : null}
                 <Footer />
             </div>

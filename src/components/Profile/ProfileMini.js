@@ -10,7 +10,7 @@ const ProfileMini = (props) => {
         backgroundPosition: 'center'
     }
     return (
-        <div className="ProfileMini">
+        <div className="ProfileMini button" onClick={() => props.changeProfile(props.id)}>
             <div style={photoStyle}></div>
             <div>{props.name}</div>
             <div>{props.breed}</div>

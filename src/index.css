@@ -18,11 +18,11 @@ body {
   font-size: 2.5em;
   margin: 5px; }
 
-.Account {
+.ProfileList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
-  .Account .button {
+  .ProfileList .button {
     height: 304px;
     width: 200px;
     margin: 10px;
@@ -34,7 +34,7 @@ body {
     border: 1px solid grey;
     box-shadow: grey 1px 1px 1px;
     font-weight: 600; }
-    .Account .button .fas {
+    .ProfileList .button .fas {
       font-size: 25px;
       margin: 10px; }
 
