@@ -39,6 +39,8 @@ body {
   align-items: center;
   border: 1px solid grey;
   box-shadow: grey 1px 1px 1px; }
+  .ProfileMini span {
+    text-transform: capitalize; }
 
 .Home {
   display: flex;
@@ -52,7 +54,22 @@ body {
     margin: auto; }
   .Photo .photo {
     height: 500px;
-    width: 500px; }
+    width: 500px;
+    background-size: cover;
+    background-position: center; }
+  .Photo .profile-info {
+    display: flex;
+    padding: 5px 0; }
+  .Photo .profile-photo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center; }
+  .Photo span {
+    text-transform: capitalize;
+    line-height: 50px;
+    padding: 0 5px; }
 
 .Login {
   text-align: center;
@@ -161,3 +178,5 @@ body {
     letter-spacing: 1px; }
   .Profile .photo span, .Profile .photo p {
     text-transform: capitalize; }
+  .Profile .photo .button {
+    background-color: rgba(211, 211, 211, 0.7); }

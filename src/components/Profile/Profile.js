@@ -36,6 +36,8 @@ class Profile extends Component {
                     url={item.url}
                     timestamp={item.timestamp}
                     caption={item.caption}
+                    // name={name}
+                    // profilePhoto={profile_photo}
                 />
             )
         })
@@ -46,7 +48,7 @@ class Profile extends Component {
                     <div>{breed}</div>
                     <div>{sex}</div>
                     <div>{age} years old</div>
-                    <div className="button" onClick={() => this.props.changeAcctView('add photo')}>Add a photo of <span>{name}</span></div>
+                    <div className="button" onClick={() => this.props.changeView('add photo')}>Add a photo of <span>{name}</span></div>
                 </div>
                 {photos}
             </div>

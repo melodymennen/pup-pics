@@ -18,12 +18,17 @@ class Home extends Component {
     }
 
     render() {
+        console.log(this.state.photos)
         const photos = this.state.photos.map(item => {
             return (
                 <Photo key={item.id}
                     url={item.url}
                     timestamp={item.timestamp}
                     caption={item.caption}
+                    name={item.name}
+                    profilePhoto={item.profile_photo}
+                    profileId={item.profile_id}
+                    changeView={this.props.changeView}
                 />
             )
         })

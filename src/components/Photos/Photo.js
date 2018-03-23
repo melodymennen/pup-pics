@@ -2,9 +2,10 @@ import React from 'react'
 
 const Photo = (props) => {
     const photoStyle = {
-        backgroundImage: `url(${props.url})`, 
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundImage: `url(${props.url})`
+    }
+    const profilePhoto = {
+        backgroundImage: `url(${props.profilePhoto})`
     }
 
     const timestamp = (timestamp) => {
@@ -21,6 +22,7 @@ const Photo = (props) => {
     return (
         <div className="Photo">
         <div className="photo-container">
+            <div className="profile-info" ><div className="profile-photo" style={profilePhoto}></div> <span>{props.name}</span></div>
             <div className="photo" style={photoStyle}></div>
             <div>{props.caption}</div>
             <div>{timestamp(props.timestamp)}</div>

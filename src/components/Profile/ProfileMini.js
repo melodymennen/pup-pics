@@ -12,7 +12,7 @@ const ProfileMini = (props) => {
     return (
         <div className="ProfileMini button" onClick={() => props.changeProfile(props.id)}>
             <div style={photoStyle}></div>
-            <div>{props.name}</div>
+            <div><span>{props.name}</span></div>
             <div>{props.breed}</div>
             <div>{props.sex}</div>
             <div>{props.age} years old</div>

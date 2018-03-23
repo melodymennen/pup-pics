@@ -8,8 +8,7 @@ import axios from 'axios'
 class Account extends Component {
     state = {
         view: 'account',
-        profiles: [], 
-        currentProfile: null
+        profiles: []
     }
 
     componentDidMount(){
@@ -26,23 +25,14 @@ class Account extends Component {
         this.setState({view: input})
     }
 
-    changeProfile = (input) => {
-        this.setState({
-            currentProfile: input, 
-            view: 'profile'
-        })
-    }
-
     render() {
         const { view, profiles, currentProfile } = this.state
         return (
             <div className="Account">
                 {this.state.view}
                 {
-                view === 'account' ? <ProfileList changeAcctView={this.changeAcctView} profiles={profiles} changeProfile={this.changeProfile}/> : 
+                view === 'account' ? <ProfileList changeAcctView={this.changeAcctView} profiles={profiles} changeProfile={this.props.changeProfile}/> : 
                 view === 'new profile' ? <NewProfile changeAcctView={this.changeAcctView}/> : 
-                view === 'add photo' ? <AddPhoto changeView={this.props.changeView} profile={currentProfile}/> : 
-                view === 'profile' ? <Profile changeAcctView={this.changeAcctView} profile={currentProfile}/> : 
                 view === 'view' ? <component /> : null}
             </div>
         )
