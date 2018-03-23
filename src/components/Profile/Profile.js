@@ -26,7 +26,7 @@ class Profile extends Component {
     }
 
     render(){
-        const { profile_photo, name, breed, age, sex } = this.state.profile
+        const { profile_photo, name, breed, age, sex, user_id } = this.state.profile
         const photoStyle = {
             backgroundImage: `url(${profile_photo})` 
         }
@@ -36,8 +36,6 @@ class Profile extends Component {
                     url={item.url}
                     timestamp={item.timestamp}
                     caption={item.caption}
-                    // name={name}
-                    // profilePhoto={profile_photo}
                 />
             )
         })
@@ -48,7 +46,9 @@ class Profile extends Component {
                     <div>{breed}</div>
                     <div>{sex}</div>
                     <div>{age} years old</div>
-                    <div className="button" onClick={() => this.props.changeView('add photo')}>Add a photo of <span>{name}</span></div>
+                    {this.props.user && user_id === this.props.user.id &&
+                        <div className="button" onClick={() => this.props.changeView('add photo')}>Add a photo of <span>{name}</span></div>
+                    }
                 </div>
                 {photos}
             </div>

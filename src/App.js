@@ -24,7 +24,7 @@ class App extends Component {
         const password = this.refs.password.value
 
         axios.post('/register', {username, password}).then(response => {
-            this.setState({ user: response.data.user.user, view: 'home' })
+            this.setState({ user: response.data.user, view: 'home' })
         })
     }
       
@@ -33,7 +33,7 @@ class App extends Component {
         const password = this.refs.password.value
 
         axios.post('/login', {username, password}).then(response => {
-            this.setState({ user: response.data.user.user, view: 'home' })
+            this.setState({ user: response.data.user, view: 'home' })
         })
     }
     
@@ -46,7 +46,7 @@ class App extends Component {
     getUser = () => {
         axios.get('/user-data').then(response => {
             if (response.data) {
-                this.setState({ user: response.data.user })
+                this.setState({ user: response.data })
             }
         })
     }
@@ -69,12 +69,11 @@ class App extends Component {
         return (
             <div className="App">
                 <Header user={user} changeView={this.changeView}/>
-                {`${this.state.view} - user: ${user}`}
                 {
-                view === 'home' ? <Home changeView={this.changeView}/> : 
+                view === 'home' ? <Home changeProfile={this.changeProfile}/> : 
                 view === 'login' ? <Login login={this.login} register={this.register} inputFields={inputFields} /> : 
                 view === 'account' ? <Account user={user} changeView={this.changeView} changeProfile={this.changeProfile}/> : 
-                view === 'profile' ? <Profile changeView={this.changeView} profile={currentProfile}/> :
+                view === 'profile' ? <Profile changeView={this.changeView} profile={currentProfile} user={user}/> :
                 view === 'add photo' ? <AddPhoto changeView={this.changeView} profile={currentProfile}/> : 
                 view === 'view' ? <component /> : 
                 view === 'view' ? <component /> : null}

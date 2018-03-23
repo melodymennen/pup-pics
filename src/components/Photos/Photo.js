@@ -22,7 +22,7 @@ const Photo = (props) => {
     return (
         <div className="Photo">
         <div className="photo-container">
-            <div className="profile-info" ><div className="profile-photo" style={profilePhoto}></div> <span>{props.name}</span></div>
+            <div className="profile-info" ><div className="profile-photo button" style={profilePhoto} onClick={() => props.changeProfile(props.profileId)}></div> <span>{props.name}</span></div>
             <div className="photo" style={photoStyle}></div>
             <div>{props.caption}</div>
             <div>{timestamp(props.timestamp)}</div>
