@@ -73,11 +73,6 @@ body {
   .Login .signup {
     background-color: lightgrey; }
 
-.Profile {
-  text-align: center; }
-  .Profile .photo {
-    width: 90%; }
-
 .AddPhoto {
   display: flex;
   flex-direction: column;
@@ -143,3 +138,26 @@ body {
   min-width: 300px;
   width: 51%;
   margin: 10px; }
+
+.Profile .photo {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  position: relative; }
+  .Profile .photo div, .Profile .photo p {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center; }
+  .Profile .photo p {
+    font-size: 2em;
+    letter-spacing: 1px; }
+  .Profile .photo span, .Profile .photo p {
+    text-transform: capitalize; }

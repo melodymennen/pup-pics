@@ -9,7 +9,7 @@ const Photo = (props) => {
 
     const timestamp = (timestamp) => {
         const rightNow = new Date().getTime()
-        const date = new Date(timestamp)
+        const date = new Date(+timestamp)
         const diff = rightNow - timestamp
         const seconds = diff / 1000
         const minutes = seconds / 60 

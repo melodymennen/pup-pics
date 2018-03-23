@@ -27,6 +27,9 @@ class Profile extends Component {
 
     render(){
         const { profile_photo, name, breed, age, sex } = this.state.profile
+        const photoStyle = {
+            backgroundImage: `url(${profile_photo})` 
+        }
         const photos = this.state.photos.map(item => {
             return (
                 <Photo key={item.id}
@@ -38,12 +41,13 @@ class Profile extends Component {
         })
         return (
             <div className="Profile">
-                <img src={profile_photo} alt={name} className="photo"/>
-                <div>{name}</div>
-                <div>{breed}</div>
-                <div>{sex}</div>
-                <div>{age} years old</div>
-                <button onClick={() => this.props.changeAcctView('add photo')}>Add a photo of {name}</button>
+                <div className="photo" style={photoStyle}>
+                    <p>{name}</p>
+                    <div>{breed}</div>
+                    <div>{sex}</div>
+                    <div>{age} years old</div>
+                    <div className="button" onClick={() => this.props.changeAcctView('add photo')}>Add a photo of <span>{name}</span></div>
+                </div>
                 {photos}
             </div>
         )
