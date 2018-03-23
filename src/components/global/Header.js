@@ -7,8 +7,13 @@ const Header = (props) => {
                 Pup Pics
             </div>
             {props.user && 
-                <div className="right button" onClick={() => props.changeView('account')} >
-                    Account
+                <div className="right">
+                    <div className="button" onClick={() => props.changeView('account')} >
+                        Account
+                    </div>
+                    <div className="button" onClick={() => props.logout()} >
+                        Log Out
+                    </div>
                 </div>
             }
             {props.user === null && 

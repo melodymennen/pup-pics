@@ -68,7 +68,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Header user={user} changeView={this.changeView}/>
+                <Header user={user} changeView={this.changeView} logout={this.logout}/>
                 {
                 view === 'home' ? <Home changeProfile={this.changeProfile}/> : 
                 view === 'login' ? <Login login={this.login} register={this.register} inputFields={inputFields} /> : 

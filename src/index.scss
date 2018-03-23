@@ -12,12 +12,19 @@ body {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  .right {
+    display: flex;
+    div {
+      margin: 0 10px;
+    }
+  }
 }
 
 .ProfileList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 50px;
   .button {
     height: 304px;
     width: 200px;
@@ -114,6 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;  
   textarea {
     min-width: 300px;
     width: 50%;
@@ -136,7 +144,7 @@ body {
   text-align: center;
   width: 100%;
   .dropzone {
-    border: 1px solid hotpink;
+    border: 1px solid gray;
     min-width: 300px;
     width: 50%;
     padding: 40px 5px;
@@ -153,6 +161,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 50px;  
   input {
     min-width: 300px;
     width: 50%;
@@ -172,13 +181,13 @@ body {
     display: inline-block;
     margin: 10px;
     padding: 5px 10px;
-    border: 1px solid hotpink;
+    border: 1px solid gray;
     width: 80px;
     text-align: center;
     border-radius: 25px;
   }
   .selected {
-    background-color: hotpink;
+    background-color: lightgray;
   }
 }
 
@@ -209,7 +218,6 @@ body {
     }
     p {
       font-size: 2em;
-      // font-weight: 600;
       letter-spacing: 1px;
     }
     span, p {
