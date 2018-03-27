@@ -14,13 +14,13 @@ Pup Pics is like instagram for dogs! Users can browse through photos of dogs, cr
 * Start the server with `nodemon`.
 * Start the web dev server with `yarn start`. In your browser, open `http://localhost:3000`.
 
-<!-- ## Current Features:
+## Current Features:
 - browse through photos (with or without logging in)
-- create a profile(s) and upload photos
-- display a recipe at random -->
+- create a dog profile(s) and upload photos
+- view profile and photos uploaded to that profile
 
-<!-- ## Upcoming Features:
-- connect to a third party API to help users find new recipes -->
+## Upcoming Features:
+- comment on photos 
 
 ## Tech:
 I used many technologies when making this project including but not limited to: React | JavaScript(ES6) | NodeJS | ExpressJS | Massive | PostgreSQL | Sass 

@@ -9,7 +9,8 @@ body {
 .Header {
   padding: 20px 40px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-size: 18px; }
   .Header .right {
     display: flex; }
     .Header .right div {
@@ -43,9 +44,17 @@ body {
   flex-direction: column;
   align-items: center;
   border: 1px solid grey;
-  box-shadow: grey 1px 1px 1px; }
+  box-shadow: grey 1px 1px 1px;
+  text-align: center;
+  cursor: pointer; }
   .ProfileMini span {
     text-transform: capitalize; }
+  .ProfileMini div {
+    width: 210px; }
+  .ProfileMini .photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%; }
 
 .Home {
   display: flex;

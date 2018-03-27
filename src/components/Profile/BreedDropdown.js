@@ -19,7 +19,8 @@ class BreedDropdown extends Component {
             {value:'Affenpoo', label:'Affenpoo'},
             {value:'Akita', label:'Akita'},
             {value:'Alaskan Klee Kai', label:'Alaskan Klee Kai'},
-            {value:'American Bulldog', label:'American Bulldog'}]
+            {value:'American Bulldog', label:'American Bulldog'},
+            {label:'Cavalier King Charles Spaniel',value:'Cavalier King Charles Spaniel'}]
         return (
             <div className="BreedDropdown">
                 <Select

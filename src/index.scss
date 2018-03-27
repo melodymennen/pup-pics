@@ -12,6 +12,7 @@ body {
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
   .right {
     display: flex;
     div {
@@ -52,8 +53,18 @@ body {
   align-items: center;
   border: 1px solid grey;
   box-shadow: grey 1px 1px 1px;
+  text-align: center;
+  cursor: pointer;
   span {
     text-transform: capitalize;
+  }
+  div {
+    width: 210px;
+  }
+  .photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
   }
 }
 
