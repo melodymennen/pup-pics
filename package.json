@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "server/server.js",
-  "proxy": "http://localhost:3035",
+  "proxy": "http://localhost:3045",
   "dependencies": {
     "aws-sdk": "^2.210.0",
     "axios": "^0.18.0",
@@ -30,7 +30,9 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-start": "node server/server.js",
+    "deploy": "now --public --dotenv=.env.prod -d"
   },
   "now": {
     "alias": "pup-pics"

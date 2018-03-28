@@ -1,6 +1,6 @@
 # Pup Pics
 
-<!-- ## For the live version, click [here](http://wtfsimte.com). -->
+## For the live version, click [here](https://pup-pics.now.sh/).
 
 ## Overview
 Pup Pics is like instagram for dogs! Users can browse through photos of dogs, create an account to post their own pup pics and more.

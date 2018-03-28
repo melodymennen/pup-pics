@@ -26,7 +26,7 @@ massive(process.env.CONNECTION_STRING).then(db => {
     console.log('error', error)
 })
 
-// app.use( express.static( `${__dirname}/../build` ) )
+app.use( express.static( `${__dirname}/../build` ) )
 
 // my endpoints
 app.post('/api/profiles', controller.createProfile)
@@ -121,10 +121,10 @@ app.post('/upload', upload.single('image'), (req, res) => {
     })
 })
 
-// const path = require('path')
-// app.get('*', (req, res)=>{
-//   res.sendFile(path.join(__dirname, '../build/index.html'))
-// })
+const path = require('path')
+app.get('*', (req, res)=>{
+  res.sendFile(path.join(__dirname, '../build/index.html'))
+})
  
 const port = process.env.SERVER_PORT
 app.listen(port, () => console.log('listening on port ' + port))
