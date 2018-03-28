@@ -26,11 +26,8 @@ Pup Pics is like instagram for dogs! Users can browse through photos of dogs, cr
 ## Tech:
 I used many technologies when making this project including but not limited to: React | JavaScript(ES6) | NodeJS | ExpressJS | Massive | PostgreSQL | Sass 
 
-<!-- ## Preview
-![Landing Page](https://github.com/melodymennen/personal-project/blob/master/assets/landing%20page-wtfsimte.com.png)
+## Preview
+![Home Page](https://github.com/melodymennen/pup-pics/blob/master/assets/pup-pics-home.png)
 
-![All Recipes Page](https://github.com/melodymennen/personal-project/blob/master/assets/all%20recipes-wtfsimte.com.png)
+![Profile Page](https://github.com/melodymennen/pup-pics/blob/master/assets/pup-pics-profile.png)
 
-![Add/Edit Recipe Page](https://github.com/melodymennen/personal-project/blob/master/assets/edit%20recipe-wtfsimte.com.png)
-
-![Recipe Page](https://github.com/melodymennen/personal-project/blob/master/assets/recipe-wtfsimte.com.png) -->
