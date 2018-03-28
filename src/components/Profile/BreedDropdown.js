@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Select from 'react-select'
+import breeds from '../../breed-data'
 import 'react-select/dist/react-select.css'
 
 
@@ -14,13 +15,7 @@ class BreedDropdown extends Component {
     }
 
     render (){
-        const breeds = [
-            {value:'Affenpinscher',label:'Affenpinscher'},
-            {value:'Affenpoo', label:'Affenpoo'},
-            {value:'Akita', label:'Akita'},
-            {value:'Alaskan Klee Kai', label:'Alaskan Klee Kai'},
-            {value:'American Bulldog', label:'American Bulldog'},
-            {label:'Cavalier King Charles Spaniel',value:'Cavalier King Charles Spaniel'}]
+        console.log(breeds)
         return (
             <div className="BreedDropdown">
                 <Select
