@@ -21,6 +21,7 @@ Pup Pics is like instagram for dogs! Users can browse through photos of dogs, cr
 
 ## Upcoming Features:
 - comment on photos 
+- edit and delete profiles
 
 ## Tech:
 I used many technologies when making this project including but not limited to: React | JavaScript(ES6) | NodeJS | ExpressJS | Massive | PostgreSQL | Sass 

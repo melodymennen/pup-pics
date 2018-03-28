@@ -31,9 +31,10 @@ massive(process.env.CONNECTION_STRING).then(db => {
 // my endpoints
 app.post('/api/profiles', controller.createProfile)
 app.get('/api/profiles', controller.getProfiles)
-app.post('/api/singleprofile', controller.getProfile)
+app.post('/api/singleprofile', controller.getProfile) //get request, needed body
 app.post('/api/photos', controller.addPhoto)
-app.post('/api/photosperpet', controller.getPhotosPerPet)
+app.post('/api/photosperpet', controller.getPhotosPerPet) //get request, needed body
+app.post('/api/deleteprofile', controller.deleteProfile) //delete, needed body
 app.get('/api/photos', controller.getAllPhotos)
 
 // bcrypt login stuff

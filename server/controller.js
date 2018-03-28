@@ -48,5 +48,13 @@ module.exports = {
         db.get_photos_per_pet([id]).then(photos => {
             res.status(200).json(photos)
         }).catch(error => console.log('get photos per pet error', error))
+    },
+    deleteProfile: (req, res) => {
+        const db =  req.app.get('db')
+        const { id } = req.body
+
+        db.delete_profile([id]).then(() => {
+            res.status(200).send('success')
+        }).catch(error => console.log('delete profile error', error))
     }
 }
