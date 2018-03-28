@@ -15,7 +15,6 @@ class BreedDropdown extends Component {
     }
 
     render (){
-        console.log(breeds)
         return (
             <div className="BreedDropdown">
                 <Select

@@ -42,9 +42,10 @@ app.post('/register', (req, res) => {
     const { username, password } = req.body
   
     bcrypt.hash(password, saltRounds).then(hashedPassword => {
-        db.create_user([username, hashedPassword]).then(() => {
-            req.session.user = { username } 
+        db.create_user([username, hashedPassword]).then(user => {
+            req.session.user = { user: user[0].username, id: user[0].id } 
             res.json({user: req.session.user})
+            console.log(req.session.user)
         }).catch(error => {
             console.log('create user error', error)
             res.status(500).json({message: 'something bad happened'})

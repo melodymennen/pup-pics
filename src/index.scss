@@ -102,6 +102,24 @@ body {
     line-height: 50px;
     padding: 0 5px;
   }
+  @media (max-width:600px){
+    .photo-container {
+      width: 400px;
+    }
+    .photo {
+      height: 400px;
+      width: 400px;
+    }
+  }
+  @media (max-width:450px){
+    .photo-container {
+      width: 300px;
+    }
+    .photo {
+      height: 300px;
+      width: 300px;
+    }
+  }
 }
 
 .Login {

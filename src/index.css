@@ -84,6 +84,18 @@ body {
     text-transform: capitalize;
     line-height: 50px;
     padding: 0 5px; }
+  @media (max-width: 600px) {
+    .Photo .photo-container {
+      width: 400px; }
+    .Photo .photo {
+      height: 400px;
+      width: 400px; } }
+  @media (max-width: 450px) {
+    .Photo .photo-container {
+      width: 300px; }
+    .Photo .photo {
+      height: 300px;
+      width: 300px; } }
 
 .Login {
   text-align: center;
