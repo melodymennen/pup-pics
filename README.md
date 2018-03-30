@@ -27,7 +27,7 @@ Pup Pics is like instagram for dogs! Users can browse through photos of dogs, cr
 I used many technologies when making this project including but not limited to: React | JavaScript(ES6) | NodeJS | ExpressJS | Massive | PostgreSQL | Sass 
 
 ## Preview
-![Home Page](https://github.com/melodymennen/pup-pics/blob/master/assets/pup-pics-home.png)
+![Home Page](https://s3-us-west-1.amazonaws.com/muffin-bucket-bucket-o-muffins/misc+images/pup-pics-home.png)
 
-![Profile Page](https://github.com/melodymennen/pup-pics/blob/master/assets/pup-pics-profile.png)
+![Profile Page](https://s3-us-west-1.amazonaws.com/muffin-bucket-bucket-o-muffins/misc+images/pup-pics-profile.png)
 
