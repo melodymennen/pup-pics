@@ -39,7 +39,12 @@ class AddPhoto extends Component{
     render() {
         return (
             <div className="AddPhoto">
-                <FileUpload sendUrl={this.sendUrl}/>
+                {!this.state.url &&
+                    <FileUpload sendUrl={this.sendUrl}/>
+                }
+                {this.state.url && 
+                    <img src={this.state.url} alt="img preview"/>
+                }
                 <textarea value={this.state.caption} placeholder="Write a caption....." className="input" maxLength="140" onChange={e => this.updateCaption(e.target.value)}/>
                 <div className="button" onClick={this.addPhoto}>Add Photo</div>
             </div>

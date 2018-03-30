@@ -121,7 +121,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 50px; }
-  .AddPhoto textarea {
+  .AddPhoto textarea, .AddPhoto img {
     min-width: 300px;
     width: 50%;
     padding: 5px;
@@ -155,7 +155,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 50px; }
-  .NewProfile input {
+  .NewProfile input, .NewProfile img {
     min-width: 300px;
     width: 50%;
     padding: 5px;

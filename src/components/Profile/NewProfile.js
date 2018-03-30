@@ -56,7 +56,12 @@ class NewProfile extends Component{
     render() {
         return (
             <div className="NewProfile">
-                <FileUpload sendUrl={this.sendUrl}/>
+                {!this.state.url &&
+                    <FileUpload sendUrl={this.sendUrl}/>
+                }
+                {this.state.url && 
+                    <img src={this.state.url} alt="img preview"/>
+                }
                 <input value={this.state.name} placeholder="Name" className="input" maxLength="20" onChange={e => this.updateName(e.target.value)}/>
                 <BreedDropdown updateBreed={this.updateBreed}/>
                 <input value={this.state.age} placeholder="Age" className="input" maxLength="2" onChange={e => this.updateAge(e.target.value)}/>                
